@@ -38,8 +38,8 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b - Второе число
    * @returns {number} Сумма чисел a и b
    */
-  function sum(a, b){
-    return a + b
+  function sum(a, b) {
+    return a + b;
   }
 
   /**
@@ -48,14 +48,11 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b - Второе число
    * @returns {number} Разность чисел a и b или b и a
    */
-  function difference(a, b){
-    if(a > b){
-      return a - b
-    } else if( b > a){
-      return b - a
-    } else {
-      return 0
+  function difference(a, b) {
+    if (a > b) {
+      return a - b;
     }
+    return b - a;
   }
 
   /**
@@ -65,7 +62,7 @@ Infinity делать не нужно, однако, в случае если б
    * @returns {number} Произведение чисел a и b
    */
   function multi(a, b) {
-    return a * b
+    return a * b;
   }
 
   /**
@@ -74,8 +71,8 @@ Infinity делать не нужно, однако, в случае если б
    * @param {number} b - Второе число
    * @returns {number} Частное a и b
    */
-  function division(a, b){
-    return a / b
+  function division(a, b) {
+    return a / b;
   }
 
   /**
@@ -85,24 +82,24 @@ Infinity делать не нужно, однако, в случае если б
    * @param {string} operation - Тип математической операции
    * @returns {number} Результат математической операции чисел a и b
    */
-  function mathOperation(arg1, arg2, operation){
-    if(operation === "+"){
-      return sum(arg1, arg2)
-    } else if(operation === "-"){
-      return difference(arg1, arg2)
-    } else if(operation === "/"){
-      return division(arg1, arg2)
-    } else if(operation === "*"){
-      return multi(arg1, arg2)
+  function mathOperation(arg1, arg2, operation) {
+    if (operation === "+") {
+      return sum(arg1, arg2);
+    } else if(operation === "-") {
+      return difference(arg1, arg2);
+    } else if(operation === "/") {
+      return division(arg1, arg2);
+    } else if(operation === "*") {
+      return multi(arg1, arg2);
     } else {
-      return NaN
+      return NaN;
     }
   }
-  console.log(mathOperation(2,3,"b"))
-  console.log(mathOperation(2,3,"+"))
-  console.log(mathOperation(2,3,"-"))
-  console.log(mathOperation(2,3,"/"))
-  console.log(mathOperation(2,3,"*"))
+  console.log(mathOperation(2,3,"b"));
+  console.log(mathOperation(2,3,"+"));
+  console.log(mathOperation(2,3,"-"));
+  console.log(mathOperation(2,3,"/"));
+  console.log(mathOperation(2,3,"*"));
 
 </script>
 </body>

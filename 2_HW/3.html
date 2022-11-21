@@ -23,14 +23,12 @@
 
   const a = +prompt("Введите первое число");
   const b = +prompt("Введите второе число");
-  if(a > 0 && b > 0){
-    alert(a - b)
-  } else if(a < 0 && b < 0){
-    alert(a * b)
-  } else if(a < 0 && b > 0 || a > 0 && b < 0){
-    alert(a+b)
-  } else {
-    console.log('default')
+  if (a > 0 && b > 0) {
+    console.log(a - b);
+  } else if (a < 0 && b < 0) {
+    console.log(a * b);
+  } else if (a < 0 && b > 0 || a > 0 && b < 0){
+    console.log(a+b);
   }
 </script>
 </body>
