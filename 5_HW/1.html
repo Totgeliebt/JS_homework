@@ -42,13 +42,13 @@
   поменяйте текст внутри элемента на "ссылка".
    */
   const el = document.querySelectorAll('.card-link');
-  el.textContent = "ссылка";
+  el.forEach(el => el.textContent = 'ссылка');
   /*
   3. Найти все элементы на странице с классом "card-link", которые лежат в
   элементе с классом "card-body" и вывести полученную коллекцию в консоль.
    */
-  const elem = document.querySelector('.card-body');
-  console.log(elem.querySelectorAll('.card-link'));
+  console.log(document.querySelector('.card-body .card-link'));
+
 
 
   /*
@@ -72,10 +72,10 @@
   7. Создайте тег `p`, запишите внутри него текст "Привет" и добавьте созданный
   тег в начало элемента, который имеет класс "card".
    */
-  let p = document.createElement('p');
+  const p = document.createElement('p');
   p.textContent = "Привет";
-  let card = document.querySelector('.card');
-  card.appendChild(p);
+  const card = document.querySelector('.card');
+  card.prepend(p);
   /*
   8. Удалите тег h6 на странице.
    */

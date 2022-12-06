@@ -36,7 +36,7 @@
   const elems = document.querySelectorAll('.dropdown-item');
   elems.forEach((el) => {
     el.classList.add('super-dropdown');
-  })
+  });
   /*
   2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он
   присутствует у этого элемента, либо добавить, если такого класса у элемента
@@ -56,25 +56,25 @@
   "dropdown" следующую разметку:
     <a href="#">link</a>
    */
- const divEl = document.querySelector(".dropdown");
+  const divEl = document.querySelector(".dropdown");
   divEl.insertAdjacentHTML('afterend', '<a href="#">link</a>');
 
   /*
   5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
    */
-  let element = document.querySelector('#dropdownMenuButton');
-  element.id='superDropdown';
+  const element = document.querySelector('#dropdownMenuButton');
+  element.id = 'superDropdown';
   /*
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
   атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
    */
-    const elemAttr = document.querySelector('[aria-labelledby = dropdownMenuButton]');
-    elemAttr.dataset.dd='3';
+  const elemAttr = document.querySelector('[aria-labelledby = dropdownMenuButton]');
+  elemAttr.dataset.dd='3';
   /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
    */
-    const elem4 = document.querySelector('.dropdown-toggle');
-    elem4.removeAttribute('type');
+  const elem4 = document.querySelector('.dropdown-toggle');
+  elem4.removeAttribute('type');
 
   /*
   8. Выведите в консоль все имеющиеся атрибуты и их значения тега у которого
@@ -82,11 +82,11 @@
   Вывод каждого атрибута и значений должен выглядеть следующим образом (пример):
   Атрибут "class" содержит значение "btn btn-secondary dropdown-toggle"
    */
-  let elem7 = document.querySelector('.btn.dropdown-toggle').attributes;
+  const elem7 = document.querySelector('.btn.dropdown-toggle').attributes;
 
-for (let attribute of elem7) {
-  console.log(`Атрибут ${attribute.name} содержит значение ${attribute.value}`);
-}
+  for (let attribute of elem7) {
+    console.log(`Атрибут ${attribute.name} содержит значение ${attribute.value}`);
+  }
 
 </script>
 </body>
