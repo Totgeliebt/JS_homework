@@ -58,7 +58,7 @@
   PostES5.prototype.edit = function (text) {
     this.text = text;
     this.date =  new Date();
-  }
+  };
   const post1 = new PostES5('Ed', 'Hello, world!');
   const post2 = new PostES5('Elly', 'Hello, you too!');
   console.log(post1);
@@ -93,7 +93,7 @@
   AttachedPostES5.prototype.makeTextHighlighted = function (value) {
     this.highlighted = true;
     this.date =  new Date();
-  }
+  };
 
   class AttachedPostES6 extends PostES6 {
     highlighted = false;

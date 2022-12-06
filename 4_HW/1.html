@@ -24,9 +24,9 @@
     this.name = name;
     this.price = price;
   }
-ProductES5.prototype.make25Discount = function () {
-  return this.price - (this.price * 25) / 100;
-}
+  ProductES5.prototype.make25Discount = function () {
+    this.price = this.price - (this.price * 25) / 100;
+  }
   const product = new ProductES5('milk', 100);
   const product2 = new ProductES5('bread', 150);
 
@@ -36,7 +36,7 @@ ProductES5.prototype.make25Discount = function () {
       this.price = price;
     }
     make25Discount () {
-      return this.price - (this.price * 25) / 100;
+      this.price = this.price - (this.price * 25) / 100;
     }
   }
   const product3 = new ProductES6('cheese', 220);
