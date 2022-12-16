@@ -80,7 +80,7 @@
   const messageBtn = document.querySelector('.messageBtn');
   messageBtn.addEventListener('click', event => {
     event.target.classList.add('animate__animated','animate__fadeInLeftBig');
-    event.target.style.visibility='visible';
+    event.target.style.visibility = 'visible';
   });
 
   /*
@@ -98,17 +98,21 @@
   const formElems = form.querySelectorAll('input, select');
   form.addEventListener('submit', event => {
     formElems.forEach(el => {
-      if (formElems.value === '') {
-        formElems.classList.add('.error');
+      if (el.value === '') {
+        el.classList.add('.error');
         event.preventDefault();
       }
     });
   });
   form.addEventListener('input', event => {
-    if(!event.target.classList.contains('form-control')){
+    if (!event.target.classList.contains('form-control')){
       return;
     }
-    event.target.value === '' ? event.target.classList.add('error') : event.target.classList.remove('error');
+    event.target.value === ''
+            ?
+            event.target.classList.add('error')
+            :
+            event.target.classList.remove('error');
   });
 
 </script>
